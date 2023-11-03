@@ -2,7 +2,7 @@ package Chapter01.example;
 
 public class TimeComplexityExample2 {
     public static void main(String[] args){
-        /* 알고리즘에는 다양한 시간복잡도를 가지고 있음 (N!, NlogN, 2^N 등등...) */
+        /* 알고리즘에는 다양한 시간복잡도를 가지고 있음 (N!, NlogN, 2^N 등등..) */
         /* 상수는 시간복잡도 계산에서 제외된다. */
         /* 가장 많이 중첩된 반복문의 수행 횟수가 시간 복잡도의 기준이 된다. */
 
