@@ -1,4 +1,4 @@
-package Chapter01;
+package Chapter01.example;
 
 public class TimeComplexityExample2 {
     public static void main(String[] args){

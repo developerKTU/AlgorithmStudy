@@ -1,4 +1,4 @@
-package Chapter01;
+package Chapter01.example;
 
 public class TimeComplexityExample1 {
     /* 시간복잡도 : 주어진 문제를 해결하기 위한 연산횟수 (1억번 연산 = 1초) */
