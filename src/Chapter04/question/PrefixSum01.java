@@ -20,8 +20,8 @@ public class PrefixSum01 {
         //구간합 배열 S 선언 및 초기화
         ArrayList<Integer> S = new ArrayList<Integer>();
         S.add(0, 0);
-        for(int i = 0; i < A.size(); i++){
-            S.add(i+1, S.get(i) + A.get(i));
+        for(int i = 1; i < A.size()+1; i++){
+            S.add(i, S.get(i-1) + A.get(i-1));
         }
         // 구간 입력받을 변수 선언 및 초기화
         int i = 0;

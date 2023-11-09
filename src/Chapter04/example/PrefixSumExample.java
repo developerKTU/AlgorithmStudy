@@ -11,11 +11,11 @@ public class PrefixSumExample {
         int[] S = new int[A.length+1];
         S[0] = 0;
 
-        for(int i = 0; i < A.length; i++){
-            S[i+1] = S[i] + A[i];
+        for(int i = 1; i < A.length+1; i++){
+            S[i] = S[i-1] + A[i-1];
         }
 
-        // A배열의 첫번째 부터 세번째 까지 합 --> 47
+        // A배열의 첫번째 부터 세번째 까지 합 --> 29
         result = S[3] - S[1-1];  // S[j] - S[i-1]
 
         System.out.println(result);
