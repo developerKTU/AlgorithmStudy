@@ -3,7 +3,7 @@ package Chapter03.PrefixSum.example;
 public class PrefixSumExample {
     public static void main(String[] args){
         // 원본 배열 A 선언
-        int[] A = {3, 10, 16, 21, 33};
+        int[] A = new int[]{3, 10, 16, 21, 33};
         // 결과를 담을 변수 선언
         int result = 0;
 
@@ -16,7 +16,7 @@ public class PrefixSumExample {
         }
 
         // A배열의 첫번째 부터 세번째 까지 합 --> 29
-        result = S[3] - S[1-1];  // S[j] - S[i-1]
+        result = S[3] - S[0];  // S[j] - S[i-1] --> S[3] - s[1-1]
 
         System.out.println(result);
     }
