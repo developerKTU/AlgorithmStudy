@@ -1,4 +1,4 @@
-package Chapter03.question;
+package Chapter03.ArrayAndList.question;
 
 import java.util.Scanner;
 

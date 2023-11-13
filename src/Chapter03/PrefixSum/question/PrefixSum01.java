@@ -1,4 +1,4 @@
-package Chapter04.question;
+package Chapter03.PrefixSum.question;
 
 import java.util.ArrayList;
 import java.util.Scanner;
