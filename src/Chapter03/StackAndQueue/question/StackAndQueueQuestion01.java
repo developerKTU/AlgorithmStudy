@@ -26,7 +26,7 @@ public class StackAndQueueQuestion01 {
 
         /* 스택 생성 */
         Stack<Integer> stack = new Stack<>();
-        /* 자연수 n 초기화 */
+        /* 자연수 num 초기화 */
         int num = 1;
 
         for(int i = 0; i < n; i++){
@@ -41,7 +41,16 @@ public class StackAndQueueQuestion01 {
             }else{
                 int popData = stack.pop();
                 /* 스택의 가장 peak 값이 만드려는 수열값 보다 크면 NO출력 후 프로그램 종료. */
-                if(su.get(i) < popData){
+                /* 이 문제는 push될 때, 연속된 자연수가 오름차순으로 push됨.
+                   그리고 수열과 자연수가 같아질때 해당 자연수를 push 직후 바로 pop하고, 다음 수열로 넘어간다.
+
+                   다음 수열로 넘어간 후 자연수보다 그 수열이 작을때,
+                   수열과 스택에서 pop된 숫자가 같다면, 숫자가 오름차순으로 push됐고, 후입선출도 성립됐다는 의미
+                   그리고, 오름차순으로 자연수를 넣을 수 없으니 pop연산 후 다음 수열로 넘어간다.
+
+                   이 경우는 이전 과정에서 peak값이 pop된 것이 아니라 peak가 아닌 데이터가 pop이 된다는 의미이므로
+                   스택의 후입선출 개념에 위배됨. */
+                if(su.get(i) != popData){
                     System.out.println("NO");
                     /* 정답배열을 출력하지 않는다. */
                     answerFlag = false;
