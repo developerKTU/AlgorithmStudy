@@ -1,7 +1,6 @@
 package Chapter03.ArrayAndList.question;
 
 import java.io.*;
-import java.util.Scanner;
 
 /* 백준 - 11720번 문제 */
 public class ArrayAndList01 {

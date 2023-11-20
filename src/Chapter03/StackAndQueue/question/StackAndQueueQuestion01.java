@@ -2,7 +2,6 @@ package Chapter03.StackAndQueue.question;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Scanner;
 import java.util.Stack;
 
 /* 백준 - 1874번 문제 */

@@ -1,7 +1,6 @@
 package Chapter03.ArrayAndList.question;
 
 import java.io.*;
-import java.util.Scanner;
 import java.util.StringTokenizer;
 
 /* 백준 - 1546번 문제 */

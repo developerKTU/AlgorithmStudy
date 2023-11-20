@@ -2,7 +2,6 @@ package Chapter03.PrefixSum.question;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Scanner;
 import java.util.StringTokenizer;
 
 /* 백준 - 11659번 문제 */
