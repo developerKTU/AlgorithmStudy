@@ -23,11 +23,9 @@ public class QueueExample02 {
         bw.newLine();
 
         /* 큐 poll 연산 수행 */
-        int pollData = queue.poll();
-        bw.write("poll 데이터 출력 : " + String.valueOf(pollData)+"\n");
+        bw.write("poll 데이터 출력 : " + String.valueOf(queue.poll())+"\n");
         /* peak 데이터 확인 */
-        int peekData = queue.peek();
-        bw.write("peak 데이터 출력 : " + String.valueOf(peekData)+"\n");
+        bw.write("peak 데이터 출력 : " + String.valueOf(queue.peek())+"\n");
         bw.write("현재 큐 출력 : " + queue.toString());
         bw.close();
     }
