@@ -1,12 +1,16 @@
 package Chapter03.ArrayAndList.question;
 
+import java.io.*;
 import java.util.Scanner;
 
+/* 백준 - 11720번 문제 */
 public class ArrayAndList01 {
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt();
-        String sNum = sc.next();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        int N = Integer.parseInt(br.readLine());
+        String sNum = br.readLine();
         char[] cNum = sNum.toCharArray();
         int tot = 0;
 
@@ -14,7 +18,7 @@ public class ArrayAndList01 {
             tot += c - '0';
         }
 
-        System.out.println(tot);
-
+        bw.write(String.valueOf(tot));
+        bw.close();
     }
 }
