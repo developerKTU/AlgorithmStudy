@@ -3,6 +3,7 @@ package Chapter03.StackAndQueue.example;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/* 스택 직접 구현 */
 public class StackExample01 {
 
     /* top 위치 조회하는 함수 */
@@ -16,7 +17,7 @@ public class StackExample01 {
     }
 
     /* top 위치에 있는 데이터를 조회하는 함수 */
-    static int peak(ArrayList<Integer> arr){
+    static int peek(ArrayList<Integer> arr){
         if(arr.isEmpty()){
             return -1;
         }else {
@@ -53,7 +54,7 @@ public class StackExample01 {
         /* 현재 top의 위치 확인 */
         int top = top(stackArr);
         /* 현재 top 위치의 데이터 확인 */
-        int topData = peak(stackArr);
+        int topData = peek(stackArr);
         System.out.println("현재 top 위치(index) : " + top);
         System.out.println("현재 top 위치의 데이터 : " + topData);
         System.out.println();
@@ -64,7 +65,7 @@ public class StackExample01 {
         /* push 후 현재 top의 위치 확인 */
         top = top(stackArr);
         /* push 후 현재 top 위치의 데이터 확인 */
-        topData = peak(stackArr);
+        topData = peek(stackArr);
         System.out.println("현재 top 위치(index) : " + top);
         System.out.println("현재 top 위치(index) : " + topData);
         System.out.println();
@@ -72,7 +73,7 @@ public class StackExample01 {
 
         int pop = pop(stackArr);
         top = top(stackArr);
-        topData = peak(stackArr);
+        topData = peek(stackArr);
         System.out.println("pop된 데이터 : " + pop);
         System.out.println("현재 top 위치(index) : " + top);
         System.out.println("현재 top 위치의 데이터 : " + topData);

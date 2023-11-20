@@ -2,6 +2,7 @@ package Chapter03.StackAndQueue.example;
 
 import java.util.ArrayList;
 
+/* 큐 직접 구현 */
 public class QueueExample01 {
 
     /* 큐 배열에 데이터를 삽입하는 함수 */
@@ -22,7 +23,7 @@ public class QueueExample01 {
     }
 
     /* front 영역의 데이터 확인하는 함수 */
-    static int peak(ArrayList<Integer> arr){
+    static int peek(ArrayList<Integer> arr){
         if(arr.isEmpty()){
             return -1;
         }else{
@@ -42,7 +43,7 @@ public class QueueExample01 {
     public static void main(String[] args){
         /*배열선언*/
         ArrayList<Integer> queueArr = new ArrayList<>();
-        int front = peak(queueArr);
+        int front = peek(queueArr);
         int rear = rear(queueArr);
 
         /* front 영역의 데이터 확인 */
@@ -57,7 +58,7 @@ public class QueueExample01 {
         qAdd(queueArr, 10);
         qAdd(queueArr, 17);
         qAdd(queueArr, 21);
-        front = peak(queueArr);
+        front = peek(queueArr);
         rear = rear(queueArr);
 
         /* add 후 front 영역의 데이터 확인 */
@@ -70,7 +71,7 @@ public class QueueExample01 {
 
         /* front 영역의 데이터 poll */
         int pollData = poll(queueArr);
-        front = peak(queueArr);
+        front = peek(queueArr);
         rear = rear(queueArr);
 
         /* poll 데이터 확인 */
