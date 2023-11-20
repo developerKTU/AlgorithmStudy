@@ -19,17 +19,10 @@ public class StackAndQueueQuestion02 {
             queue.add(i);
         }
 
-        /* poll된 데이터를 담을 변수 p 선언 */
-        int p = 0;
-
         /* 로직수행 */
-        while (true){
+        while (queue.size() > 1){
             queue.poll();
-            p = queue.poll();
-            queue.add(p);
-            if(queue.size() == 1){
-                break;
-            }
+            queue.add(queue.poll());
         }
 
         bw.write(String.valueOf(queue.peek()));
