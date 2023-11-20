@@ -1,11 +1,17 @@
 package Chapter03.StackAndQueue.example;
 
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.LinkedList;
 import java.util.Queue;
 
 /* 큐 라이브러리 사용 */
 public class QueueExample02 {
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
+        /* 출력 객체 생성 */
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
         /* 큐 라이브러리 객체 생성 */
         Queue<Integer> queue = new LinkedList<>();
         /* 큐 공간에 데이터 삽입 */
@@ -13,15 +19,16 @@ public class QueueExample02 {
             queue.offer(i);
         }
         /* 현재 큐 출력 */
-        System.out.println("현재 큐 출력 : " + queue);
-        System.out.println();
+        bw.write("현재 큐 출력 : " + queue.toString() + "\n");
+        bw.newLine();
 
         /* 큐 poll 연산 수행 */
         int pollData = queue.poll();
-        System.out.println("poll 데이터 출력 : " + pollData);
+        bw.write("poll 데이터 출력 : " + String.valueOf(pollData)+"\n");
         /* peak 데이터 확인 */
-        int peakData = queue.peek();
-        System.out.println("peak 데이터 출력 : " + peakData);
-        System.out.println("현재 큐 출력 : " + queue);
+        int peekData = queue.peek();
+        bw.write("peak 데이터 출력 : " + String.valueOf(peekData)+"\n");
+        bw.write("현재 큐 출력 : " + queue.toString());
+        bw.close();
     }
 }

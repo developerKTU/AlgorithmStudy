@@ -1,21 +1,26 @@
 package Chapter03.PrefixSum.question;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class PrefixSum01 {
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         // 배열 데이터 갯수를 담는 N 변수 선언
-        int N = sc.nextInt();
+        int N = Integer.parseInt(st.nextToken());
         // 질의 갯수를 담는 QuizNum 변수 선언
-        int QuizNum = sc.nextInt();
+        int QuizNum = Integer.parseInt(st.nextToken());
         // 데이터를 담을 A 배열 선언
         ArrayList<Integer> A = new ArrayList<Integer>();
         // A 배열에 데이터 삽입
+        st = new StringTokenizer(br.readLine());
         for(int i = 0; i < N; i++){
-            A.add(sc.nextInt());
+            A.add(Integer.parseInt(st.nextToken()));
         }
         //구간합 배열 S 선언 및 초기화
         ArrayList<Integer> S = new ArrayList<Integer>();
@@ -27,11 +32,11 @@ public class PrefixSum01 {
         int i = 0;
         int j = 0;
         for(int q = 0; q < QuizNum; q++){
-            i = sc.nextInt();
-            j = sc.nextInt();
-            System.out.println(S.get(j) - S.get(i-1));
+            st = new StringTokenizer(br.readLine());
+            i = Integer.parseInt(st.nextToken());
+            j = Integer.parseInt(st.nextToken());
+            bw.write(String.valueOf(S.get(j) - S.get(i-1))+"\n");
         }
-
-        sc.close();
+        bw.close();
     }
 }

@@ -1,12 +1,14 @@
 package Chapter03.StackAndQueue.question;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Stack;
 
 public class StackAndQueueQuestion01 {
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         /* 정답배열 생성 */
         ArrayList<String> result = new ArrayList<>();
@@ -14,15 +16,13 @@ public class StackAndQueueQuestion01 {
         boolean answerFlag = true;
 
         /* 수열의 갯수 n 입력 */
-        int n = sc.nextInt();
+        int n = Integer.parseInt(br.readLine());
         /* 수열을 저장할 배열 생성 */
         ArrayList<Integer> su = new ArrayList<>();
         /* 수열 배열에 데이터 입력 */
         for(int i = 0; i < n; i++){
-            su.add(i, sc.nextInt());
+            su.add(i, Integer.parseInt(br.readLine()));
         }
-
-        sc.close();
 
         /* 스택 생성 */
         Stack<Integer> stack = new Stack<>();
@@ -51,7 +51,8 @@ public class StackAndQueueQuestion01 {
                    이 경우는 이전 과정에서 peak값이 pop된 것이 아니라 peak가 아닌 데이터가 pop이 된다는 의미이므로
                    스택의 후입선출 개념에 위배됨. */
                 if(su.get(i) != popData){
-                    System.out.println("NO");
+                    bw.write("NO");
+                    bw.flush();
                     /* 정답배열을 출력하지 않는다. */
                     answerFlag = false;
                     break;
@@ -63,9 +64,11 @@ public class StackAndQueueQuestion01 {
         /* 정답배열 출력여부가 true일때 */
         if(answerFlag){
             for(String s : result){
-                System.out.println(s);
+                bw.write(s+"\n");
             }
         }
+
+        bw.close();
 
     }
 }
