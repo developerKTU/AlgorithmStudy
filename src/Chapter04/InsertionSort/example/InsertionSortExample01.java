@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class InsertionSortExample01 {
     public static void main (String[] args){
         /* 삽입정렬 연습 - 오름차순 정렬 */
-        ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(3, 3, 3, 3, 3));
+        ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(4, 1, 3, 5, 2));
 
         /*삽입정렬 수행*/
         for(int i = 1; i < arr.size(); i++){
