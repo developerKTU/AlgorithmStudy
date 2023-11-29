@@ -20,6 +20,8 @@ public class InsertionSortExample01 {
                     insertPoint = j + 1;
                     break;
                 }
+                /* 선택된 데이터의 앞 데이터가 더 크고, 그게 첫번째 인덱스(j)일 경우에는 삽입위치가 첫번째 인덱스 이므로
+                   insertPoint를 0으로 초기화 (삽입정렬은 두번째 인덱스부터 시작하니까 첫번째 인덱스는 별도로 지정해줘야함.)*/
                 if(j == 0){
                     insertPoint = 0;
                 }
