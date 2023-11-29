@@ -20,7 +20,7 @@ public class BubbleSortQuestion01 {
 
         /* 버블정렬 수행 */
         for(int i = 0; i < arr.size()-1; i++){  /* 버블정렬에서 loop 수는 배열사이즈의 -1 만큼 수행한다. */
-            for(int j = 0; j < arr.size()-1-i; j++){  /* 이미 정렬 완료된 데이터를 하나씩 loop에서 제외해야 하므로 배열사이즈-1 에서 i 만큼 뺀 횟수 loop */
+            for(int j = 0; j < arr.size()-1-i; j++){  /* 이미 정렬 완료된 데이터를 하나씩 loop에서 제외해야 하므로 i 만큼 뺀 횟수 loop */
                 if(arr.get(j) > arr.get(j+1)){
                     temp = arr.get(j);
                     arr.set(j, arr.get(j+1));
