@@ -20,6 +20,7 @@ public class BubbleSortExample01 {
     }
 
     public static void main(String[] args) throws IOException {
+        /* ========== 오름차순 정렬 ========== */
         /* 배열선언 */
         ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(5,4,3,2,1));
         /* 임시 데이터를 저장할 변수 선언 */
@@ -40,6 +41,7 @@ public class BubbleSortExample01 {
         show(arr);
 
 
+        /* ========== 내림차순 정렬 ========== */
         /* 배열 선언 */
         ArrayList<Integer> arr2 = new ArrayList<>(Arrays.asList(1, 2, 2, 3, 4, 5));
         temp = 0;
