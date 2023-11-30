@@ -9,7 +9,7 @@ public class QuickSortExample01 {
         /* 피벗포인터 */
         int pivotPointer = 0;
         /* 피벗데이터 */
-        int pivot = arr.get(0);
+        int pivot = arr.get(pivotPointer);
         /* 피벗데이터를 제외한 가장 왼쪽 포인터 */
         int l = pivotPointer + 1;
         /* 피벗데이터를 제외한 가장 오른쪽 포인터 */
