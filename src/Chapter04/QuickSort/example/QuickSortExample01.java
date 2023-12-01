@@ -1,19 +1,35 @@
 package Chapter04.QuickSort.example;
 
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class QuickSortExample01 {
-    public static void main(String[] args){
-        ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(6, -8, 1, 12, 8, 3, 7, -7));
-        /* 피벗포인터 */
-        int pivotPointer = 0;
-        /* 피벗데이터 */
-        int pivot = arr.get(pivotPointer);
+
+    /* 배열 전역변수 선언 및 초기화 */
+    static ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(6, -8, 1, 12, 8, 3, 7, -7));
+
+    /* 값을 서로 바꿀 swap 함수 */
+    private static void swap(int a, int b){
+        int temp = 0;
+        temp = arr.get(a);
+        arr.set(a, arr.get(b));
+        arr.set(b, temp);
+    }
+
+    /* 퀵정렬 수행 함수 */
+    private static void quickSorter(int st, int en){
+        /* 수열의 길이가 1이하면 알고리즘 종료 (base condition) */
+        /* en 포인터가 작을때 : 애초에 en과 st가 역전된 상태, en과 st가 같을때 : 수열의 길이가 1인 상태  */
+        if(en <= st+1) return;
+        /* 피벗데이터 : 가장 왼쪽 데이터로 선정 */
+        int pivot = arr.get(st);
         /* 피벗데이터를 제외한 가장 왼쪽 포인터 */
-        int l = pivotPointer + 1;
+        int l = st + 1;
         /* 피벗데이터를 제외한 가장 오른쪽 포인터 */
-        int r = arr.size()-1;
+        int r = en-1;
         /* 임시변수 temp 선언 */
         int temp = 0;
 
@@ -27,19 +43,23 @@ public class QuickSortExample01 {
             if(l > r) break;
 
             /* swap 연산 수행 (위의 두 while 문을 거치면서 swap 해야할 포인터들로 초기화 되어있음.) */
-            temp = arr.get(l);
-            arr.set(l, arr.get(r));
-            arr.set(r, temp);
+            swap(l, r);
         }//while loop end
 
         /* l 포인터가 r 포인터보다 더 크다면 피벗데이터와 r 데이터를 swap */
-        temp = arr.get(pivotPointer);
-        arr.set(pivotPointer, arr.get(r));
-        arr.set(r, temp);
+        swap(st, r);
+        quickSorter(st, r);
+        quickSorter(r+1, en);
+    }
 
-        /* 배열 출력 */
+    public static void main(String[] args) throws IOException {
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        quickSorter(0, arr.size());
+
         for(int i : arr){
-            System.out.print(i+" ");
-        }//for loop end
+            bw.write(String.valueOf(i) + " ");
+        }
+        bw.close();
     }//main end
 }// class end
