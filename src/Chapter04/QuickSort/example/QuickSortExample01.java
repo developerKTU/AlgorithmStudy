@@ -13,7 +13,7 @@ public class QuickSortExample01 {
 
     /* 값을 서로 바꿀 swap 함수 */
     private static void swap(int a, int b){
-        int temp = 0;
+        int temp;
         temp = arr.get(a);
         arr.set(a, arr.get(b));
         arr.set(b, temp);
@@ -30,8 +30,6 @@ public class QuickSortExample01 {
         int l = st + 1;
         /* 피벗데이터를 제외한 가장 오른쪽 포인터 */
         int r = en-1;
-        /* 임시변수 temp 선언 */
-        int temp = 0;
 
         while(true){
             /* l 포인터가 r 포인터보다 왼쪽에 있고, 현재 l 데이터가 피벗 데이터보다 작으면 오른쪽으로 1칸 이동 */
