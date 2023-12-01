@@ -48,7 +48,9 @@ public class QuickSortExample01 {
 
         /* l 포인터가 r 포인터보다 더 크다면 피벗데이터와 r 데이터를 swap */
         swap(st, r);
+        /* 쪼개진 배열에서 첫번째 부터 r번째까지 퀵정렬 수행 */
         quickSorter(st, r);
+        /* 쪼개진 배열에서 r의 다음번째 부터 마지막까지 퀵정렬 수행 */
         quickSorter(r+1, en);
     }
 
