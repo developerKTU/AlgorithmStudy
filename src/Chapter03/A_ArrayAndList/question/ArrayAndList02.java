@@ -1,4 +1,4 @@
-package Chapter03.ArrayAndList.question;
+package Chapter03.A_ArrayAndList.question;
 
 import java.io.*;
 import java.util.StringTokenizer;

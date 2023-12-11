@@ -1,4 +1,4 @@
-package Chapter03.PrefixSum.example;
+package Chapter03.B_PrefixSum.example;
 
 public class PrefixSumExample {
     public static void main(String[] args){

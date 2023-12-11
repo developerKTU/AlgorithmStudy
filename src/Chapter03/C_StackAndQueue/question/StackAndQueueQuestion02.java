@@ -1,4 +1,4 @@
-package Chapter03.StackAndQueue.question;
+package Chapter03.C_StackAndQueue.question;
 
 import java.io.*;
 import java.util.LinkedList;

@@ -1,7 +1,6 @@
-package Chapter03.StackAndQueue.example;
+package Chapter03.C_StackAndQueue.example;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 /* 스택 직접 구현 */
 public class StackExample01 {

@@ -1,4 +1,4 @@
-package Chapter03.StackAndQueue.example;
+package Chapter03.C_StackAndQueue.example;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
