@@ -85,5 +85,13 @@ public class DequeExample01 {
         bw.flush();
         show();
         bw.newLine();
+
+
+
+        pop_back();
+        bw.write("pop_back 함수 수행 후 tail 위치 : "+String.valueOf(tail)+"\n");
+        bw.flush();
+        show();
+        bw.newLine();
     }
 }
