@@ -1,7 +1,5 @@
 package BOJ.Basic.B_If;
 
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
-
 import java.io.*;
 
 public class If_Question04 {
