@@ -1,7 +1,5 @@
 package DoitAlgorithm.Chapter04.SelectionSort.example;
 
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
-
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
