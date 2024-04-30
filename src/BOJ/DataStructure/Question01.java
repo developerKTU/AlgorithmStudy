@@ -11,9 +11,8 @@ public class Question01 {
 
         int T = Integer.parseInt(br.readLine());
 
-        String inputString;
         for(int i = 0; i < T; i++){
-            inputString = br.readLine();
+            String inputString = br.readLine();
             Stack<Character> stack = new Stack<>();
 
             for(int j = 0; j < inputString.length(); j++){
