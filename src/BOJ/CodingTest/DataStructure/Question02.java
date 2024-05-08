@@ -1,4 +1,4 @@
-package BOJ.DataStructure;
+package BOJ.CodingTest.DataStructure;
 
 import java.io.*;
 import java.util.Stack;
