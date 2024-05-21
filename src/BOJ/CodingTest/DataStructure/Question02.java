@@ -5,7 +5,7 @@ import java.util.Stack;
 
 public class Question02 {
     public static void main(String[] args) throws IOException {
-        /* 문제번호 10773 */
+        /* 백준 10773번 문제 https://www.acmicpc.net/problem/10773 */
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int T = Integer.parseInt(br.readLine());

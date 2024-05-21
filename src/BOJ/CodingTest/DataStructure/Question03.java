@@ -6,7 +6,7 @@ import java.util.Queue;
 
 public class Question03 {
     public static void main(String[] args) throws IOException{
-        /* 문제번호 2164 */
+        /* 백준 2164번 문제 https://www.acmicpc.net/problem/2164 */
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int n = Integer.parseInt(br.readLine());

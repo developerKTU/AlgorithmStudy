@@ -5,7 +5,7 @@ import java.util.StringTokenizer;
 
 public class Question06 {
     public static void main(String[] args) throws IOException {
-        /* 문제번호 1120번 문제 */
+        /* 백준 1120번 문제 https://www.acmicpc.net/problem/1120 */
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 

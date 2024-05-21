@@ -7,6 +7,7 @@ import java.util.StringTokenizer;
 
 public class Question04 {
     public static void main(String[] args) throws IOException {
+        /* 백준 10845번 문제 https://www.acmicpc.net/problem/10845 */
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int T = Integer.parseInt(br.readLine());

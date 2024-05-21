@@ -7,7 +7,7 @@ import java.util.LinkedList;
 
 public class Question05 {
     public static void main(String[] args) throws IOException {
-        /* 백준 1158번 문제 */
+        /* 백준 1158번 문제 https://www.acmicpc.net/problem/1158 */
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st = new StringTokenizer(br.readLine());
