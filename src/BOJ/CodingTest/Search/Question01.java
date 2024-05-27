@@ -51,7 +51,7 @@ public class Question01 {
         int result = 0;     // 정답 출력 변수 선언
 
         for(int i = 1; i < N+1; i++){
-            if(!visited[i]){    // false일때 즉, 방문하지 않은 노드가 있을때
+            if(!visited[i]){    // DFS는 인접리스트들을 재귀로 계속 호출하므로 이 !visited[i] 조건에 2번 이상 걸렸다는 얘기는 서로 다른 연결요소가 존재한다는 뜻
                 result++;       // 연결요소 1증가
                 DFS(i);         // 해당 노드부터 DFS 시작
                 // DFS 함수를 수행하면서 인접한 노드집합들은 다 방문배열에 기록됨
