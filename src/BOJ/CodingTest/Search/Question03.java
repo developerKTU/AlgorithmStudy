@@ -19,14 +19,16 @@ public class Question03 {
     static boolean[][] visited;
     // 미로 선언
     static int[][] A;
-    // 미로 사이즈 변수 선언
+    // BFS 함수에서도 미로 사이즈가 필요하기 때문에 static 변수로 선언
     static int N, M;
 
     static void BFS(int i, int j){  // 시작 x, y 좌표를 파라미터로 받아온다.
-        // 시작 위치에서 인접한 경로들을 담을 큐 선언
+        // 시작 위치의 좌표를 담을 큐 선언
         Queue<int[]> queue = new LinkedList<>();
         // 시작점 삽입
         queue.offer(new int[]{i, j});
+        // 시작점 방문기록
+        visited[i][j] = true;
 
         while(queue.size() != 0){   // 더이상 BFS 탐색을 할 수 없을때까지
             // 현재 위치 꺼내옴
