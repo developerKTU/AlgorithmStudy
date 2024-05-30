@@ -30,11 +30,9 @@ public class Question03 {
         // 시작점 방문기록
         visited[i][j] = true;
 
-        while(queue.size() != 0){   // 더이상 BFS 탐색을 할 수 없을때까지
+        while(!queue.isEmpty()){   // 더이상 BFS 탐색을 할 수 없을때까지
             // 현재 위치 꺼내옴 (시작점부터)
             int nowLocation[] = queue.poll();
-            // 현재 위치 꺼내오면서 방문처리
-            visited[i][j] = true;
             // 상하좌우 DFS 탐색
             for(int k = 0; k < 4; k++){
                 // 현재 좌표에서 상하좌우로 이동한 x, y 좌표 초기화
