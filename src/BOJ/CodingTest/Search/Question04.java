@@ -12,32 +12,30 @@ public class Question04 {
     static boolean[] visited;
 
     // 깊이우선으로 풀이 - 방문횟수를 알아야 하므로 재귀 대신 스택 사용
-    static ArrayList<Integer> DFS(int node){
-        ArrayList<Integer> arr = new ArrayList<Integer>();
+    static int DFS(int node){
+        int returnVal = 0;
         Stack<Integer> stack = new Stack<>();
         stack.push(node);
         visited[node] = true;
-        arr.add(node);
 
         while(!stack.isEmpty()){
             int nowNode = stack.pop();
-            visited[nowNode] = true;
 
             for(int i : A[nowNode]){
                 if(!visited[i]){
+                    returnVal++;
                     stack.push(i);
                     visited[i] = true;
-                    arr.add(i);
                 }
             }
 
         }
-        return arr;
+        return returnVal;
     }
 
     // 너비우선으로 풀이
-    static ArrayList<Integer> BFS(int node){
-        ArrayList<Integer> arr = new ArrayList<>();
+    static int BFS(int node){
+        int returnVal = 0;
         Queue<Integer> queue = new LinkedList<>();
         queue.offer(node);
         visited[node] = true;
@@ -45,16 +43,16 @@ public class Question04 {
         while(!queue.isEmpty()){
             int nowNode = queue.poll();
             visited[nowNode] = true;
-            arr.add(nowNode);
 
             for(int i : A[nowNode]){
                 if(!visited[i]){
+                    returnVal++;
                     queue.offer(i);
                     visited[i] = true;
                 }
             }
         }
-        return arr;
+        return returnVal;
     }
 
     public static void main(String[] args) throws IOException {
@@ -81,12 +79,12 @@ public class Question04 {
         }
 
         // 너비우선탐색 풀이 답 출력
-        ArrayList<Integer> resultArr = BFS(1);
-        System.out.println(resultArr.size()-1); // 1번 컴퓨터는 제외
+        int result1 = BFS(1);
+        System.out.println(result1);
 
         // 깊이우선탐색 풀이 답 출력
         visited = new boolean[N+1];
-        ArrayList<Integer> resultArr2 = DFS(1);
-        System.out.println(resultArr2.size() -1); // 1번 컴퓨터는 제외
+        int result2 = DFS(1);
+        System.out.println(result2);
     }
 }

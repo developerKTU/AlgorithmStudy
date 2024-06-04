@@ -11,7 +11,8 @@ public class Question06 {
 
         String A = st.nextToken();
         String B = st.nextToken();
-
+        
+        // 최솟값을 구하기 위해 문제의 최대 문자열 길이인 50으로 초기화
         int result = 50;
 
         for(int i = 0; i < B.length() - A.length() + 1; i++){   // A 문자열 길이만큼 B문자열과 비교해야함.
