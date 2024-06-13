@@ -1,9 +1,9 @@
-package BOJ.CodingTest.Search;
+package BOJ.CodingTest.Search.BinarySearch;
 
 import java.io.*;
 import java.util.*;
 
-public class Question05 {
+public class Question01 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         // 데이터셋 개수 초기화

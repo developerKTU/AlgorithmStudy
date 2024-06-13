@@ -1,4 +1,4 @@
-package BOJ.CodingTest.Search;
+package BOJ.CodingTest.Search.DFS_BFS;
 
 import java.io.*;
 import java.util.ArrayList;
