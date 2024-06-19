@@ -36,7 +36,7 @@ public class Question02 {
     static int upperBound(List<Integer> dataSet, int target){
         // 시작 위치
         int start = 0;
-        // upperBound에서는 특정값의 '경계'를 찾는 함수이므로, 일반적인 이분탐색과는 달리 -1을 하지 않는다.
+        // upperBound에서는 특정값의 '경계'를 찾는 함수이므로(인덱스가 아닌 자연수를 찾는 함수), 일반적인 이분탐색과는 달리 -1을 하지 않는다.
         int end = dataSet.size();
 
         // start와 end가 같아지면 특정값 이상의 시작 위치를 찾았다는 의미이므로 while 종료
