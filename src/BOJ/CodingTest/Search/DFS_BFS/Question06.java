@@ -36,6 +36,7 @@ public class Question06 {
         }
     }
     public static void main(String[] args) throws IOException {
+        /* 문재번호 10026 - https://www.acmicpc.net/problem/10026 */
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
 

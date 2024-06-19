@@ -5,6 +5,7 @@ import java.util.*;
 
 public class Question01 {
     public static void main(String[] args) throws IOException {
+        /* 문제번호 1920 - https://www.acmicpc.net/problem/1920 */
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         // 데이터셋 개수 초기화
         int N = Integer.parseInt(br.readLine());

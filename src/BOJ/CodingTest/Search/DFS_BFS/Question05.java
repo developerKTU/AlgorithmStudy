@@ -38,6 +38,7 @@ public class Question05 {
         }
     }
     public static void main(String[] args) throws IOException {
+        /* 문제번호 1012 - https://www.acmicpc.net/problem/1012 */
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
 
