@@ -54,21 +54,24 @@ public class Question04 {
             // 영식이가 가지고 있는 랜선의 갯수를 담을 변수 선언 및 초기화
             long count = 0;
 
-            // 영식이가 가지고 있는 랜선의 길이들을 중간 길이로 나누면서 총 갯수 구함.
+            // 영식이가 가지고 있는 랜선들을 각각 중간 길이로 나누어 만들어지는 총 갯수를 구한다.
             for(int i = 0; i < dataSet.size(); i++){
                 count += (dataSet.get(i) / midLength);
             }
 
-            // mid 길이로 잘랐을때의 갯수가 만들고자 하는 갯수보다 작으면 만들고자하는 갯수를 늘리기 위해 최대길이를 줄인다.
+            // 필요한 랜선 갯수가 만들어진 랜선의 갯수보다 많으면
             if(targetAmount > count){
+                // 만들어지는 랜선의 갯수를 늘려야 하므로 나누어지는 (midLength) 값을 줄여줘야한다. 따라서 maxLength를 midLength로 변환
                 maxLength = midLength;
             }else{
-                // mid 길이로 잘랐을때의 갯수가 만들고자 하는 갯수보다 크거나 같으면 만들고자하는 갯수를 줄이기 위해 최소 길이를 늘린다.
+                // 필요한 랜선의 갯수가 만들어진 랜선의 갯수보다 작으면
+                // 만들어지는 랜선의 갯수를 줄여야 하므로 나누어지는 (midLength) 값을 늘려줘야한다. 따라서 minLength를 midLength + 1로 변환
+                // 또 다른 경우는 minLength와 maxLength가 같은 경우인데, 이 경우에는 구하고자 하는 값보다 큰 바로 다음 값(시작값)이므로 minLength + 1로 변환
                 minLength = midLength + 1;
             }
         }
 
-        // upperBound 로직은 찾고자하는 길이의 바로 다음값이 나오므로, -1을 해준다.
+        // upperBound는 구하고자하는 값보다 초과하는 바로 다음 값이므로 -1을 하면 갯수는 11개 이면서, 길이는 최대인 답이 출력됨.
         System.out.println(minLength - 1);
     }
 }
