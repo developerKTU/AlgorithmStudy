@@ -56,7 +56,7 @@ public class Question04 {
     }
 
     public static void main(String[] args) throws IOException {
-        /* 백준 2606번 문제 https://www.acmicpc.net/problem/2606 */
+        /* 백준 2606번 문제 https://www.acmicpc.net/problem/2606 */ /* ★ */
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
         int N = Integer.parseInt(br.readLine());

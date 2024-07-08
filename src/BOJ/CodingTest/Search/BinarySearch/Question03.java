@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Question03 {
     public static void main(String[] args) throws IOException {
-        /* 문제번호 10815번 문제 - https://www.acmicpc.net/problem/10815 */
+        /* 문제번호 10815번 문제 - https://www.acmicpc.net/problem/10815 */ /* ★ */
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
 
