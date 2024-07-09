@@ -1,4 +1,4 @@
-# KTU's Algorithm Study Repository!
+# 🖥️KTU's Algorithm Study Repository!🖥️
 ## 논리적 사고를 기르기 위한 알고리즘 공부 기록 레포지토리
 
 ### 사용언어
