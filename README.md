@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=BDBDC8&height=150&section=header&text=🔥🖥️KTU's%20Algorithm%20Study%20Repository!🖥️🔥&fontSize=30" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=BDBDC8&height=150&section=header&text=🔥🖥️KTU's%20Algorithm%20Study%20Repository!🖥️🔥&fontSize=30&fontAlignY=30" />
 
 ### 📌 Language
 <img alt="Html" src ="https://img.shields.io/badge/JAVA-grey"></img>
