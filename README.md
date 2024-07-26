@@ -10,6 +10,6 @@
 
 💡 Main 클래스 (복습을 자유롭게 하기 위한 Main 클래스)
 
-💡 알고리즘 일정표
+💡 알고리즘 일정표 -> 문제풀이 및 복습 풀이 시 일정 업데이트
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=BDBDC8&height=150&section=footer" />
