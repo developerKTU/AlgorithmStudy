@@ -6,6 +6,7 @@ import java.util.*;
 public class Question02 {
     public static void main(String[] args) throws IOException {
         /* 문제번호 2839번 문제 https://www.acmicpc.net/problem/2839 */
+        /* 이 문제에서는 최소 봉지 갯수를 구해야하므로 우선 5KG 봉지에 설탕을 담고 나머지 설탕은 3KG로 채운다! <- BEST! */
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         final int[] VINYL = {3, 5};
         int N = Integer.parseInt(br.readLine());
