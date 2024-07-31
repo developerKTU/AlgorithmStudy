@@ -1,8 +1,135 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
-// 연습해보고 싶은 알고리즘을 테스트해볼 수 있는 Main 클래스
+
+import OOP.Code.Bicycle.*;
+
+import java.io.*;
+
 public class Main {
-    public static void main(String[] args) {
-        int result = 0;
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        // 자전거 선택 프로그램
+        boolean loopFlag = true;
+        String frameBodyType = null;
+        int gearType = 0;
+        String handleType = null;
+        int wheelSize = 0;
+
+        int choice = 0;
+
+        while(loopFlag) {
+            System.out.println("자전거 프레임바디를 선택하세요");
+            System.out.println("1. Carbon Fiber\n2. Aluminium\n3. Titanium\n4. Steel");
+            System.out.println();
+
+            choice = Integer.parseInt(br.readLine());
+
+            switch (choice) {
+                case 1:
+                    frameBodyType = "Carbon Fiber";
+                    loopFlag = false;
+                    break;
+                case 2:
+                    frameBodyType = "Aluminium";
+                    loopFlag = false;
+                    break;
+                case 3:
+                    frameBodyType = "Titanium";
+                    loopFlag = false;
+                    break;
+                case 4:
+                    frameBodyType = "Steel";
+                    loopFlag = false;
+                    break;
+                default:
+                    System.out.println("다시 시도해주세요.\n");
+                    break;
+            }
+        }
+
+        loopFlag = true;
+        while(loopFlag) {
+            System.out.println("자전거 기어를 선택하세요");
+            System.out.println("1. 3단\n2. 4단\n3. 5단\n4. 6단");
+            System.out.println();
+
+            choice = Integer.parseInt(br.readLine());
+
+            switch (choice) {
+                case 1:
+                    gearType = 3;
+                    loopFlag = false;
+                    break;
+                case 2:
+                    gearType = 4;
+                    loopFlag = false;
+                    break;
+                case 3:
+                    gearType = 5;
+                    loopFlag = false;
+                    break;
+                case 4:
+                    gearType = 6;
+                    loopFlag = false;
+                    break;
+                default:
+                    System.out.println("다시 시도해주세요.\n");
+                    break;
+            }
+        }
+
+        loopFlag = true;
+        while(loopFlag) {
+            System.out.println("자전거 핸들을 선택하세요");
+            System.out.println("1. Carbon Fiber\n2. Plastic");
+            System.out.println();
+
+            choice = Integer.parseInt(br.readLine());
+
+            switch (choice) {
+                case 1:
+                    handleType = "Carbon Fiber";
+                    loopFlag = false;
+                    break;
+                case 2:
+                    handleType = "Plastic";
+                    loopFlag = false;
+                    break;
+                default:
+                    System.out.println("다시 시도해주세요.\n");
+                    break;
+            }
+        }
+
+        loopFlag = true;
+        while(loopFlag) {
+            System.out.println("자전거 휠 사이즈를 입력하세요. 저희 회사는 세세한 자전거 휠 사이즈를 제작해드립니다.");
+
+            wheelSize = Integer.parseInt(br.readLine());
+
+            if(wheelSize < 10){
+                System.out.println("10인치 미만은 선택하실 수 없습니다.");
+            }else{
+                loopFlag = false;
+            }
+
+        }
+
+        // 자전거 생성
+        FrameBody frameBody1 = new FrameBody();
+        frameBody1.setType(frameBodyType);
+
+        Handle handle1 = new Handle();
+        handle1.setType(handleType);
+
+        Gear gear1 = new Gear();
+        gear1.setDan(gearType);
+
+        Wheel wheel1 = new Wheel();
+        wheel1.setSize(wheelSize);
+
+        // 자전거 조립 & 생성
+        Bicycle bicycle1 = new Bicycle(frameBody1, handle1, gear1, wheel1);
+        System.out.println(bicycle1);
+
     }
 }
