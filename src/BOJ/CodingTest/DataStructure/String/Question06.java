@@ -1,4 +1,4 @@
-package BOJ.CodingTest.DataStructure;
+package BOJ.CodingTest.DataStructure.String;
 
 import java.io.*;
 import java.util.StringTokenizer;

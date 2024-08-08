@@ -1,4 +1,4 @@
-package BOJ.CodingTest.DataStructure;
+package BOJ.CodingTest.DataStructure.Queue;
 
 import java.io.*;
 import java.util.LinkedList;
