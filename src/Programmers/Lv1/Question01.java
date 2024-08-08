@@ -1,9 +1,9 @@
-package BOJ.CodingTest.DataStructure.Stack;
+package Programmers.Lv1;
 
 import java.util.*;
 
 /* 프로그래머스 - 같은 숫자는 싫어! */
-public class Question03 {
+public class Question01 {
 
     public int[] solution(int[] arr){
         int[] answer = {};
@@ -28,6 +28,7 @@ public class Question03 {
             answerList.add(i);
         }
 
+        // ArrayList에서 array로 변환! -> 플머에선 리턴타입이 array인 경우가 많으므로 외우기!
         answer = answerList.stream().mapToInt(Integer::new).toArray();
 
         return answer;
@@ -36,7 +37,7 @@ public class Question03 {
     public static void main(String[] args){
         int[] arr = {4, 4, 4, 3, 3};
 
-        Question03 q = new Question03();
+        Question01 q = new Question01();
 
         int[] answer = q.solution(arr);
 
