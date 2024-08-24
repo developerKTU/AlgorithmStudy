@@ -2,6 +2,7 @@ package Programmers.Lv2;
 
 import java.util.*;
 
+/* 프로그래머스 - 기능개발 */
 public class Question01 {
     public static int[] solution(int[] progresses, int[] speeds){
         int[] answer = {};
