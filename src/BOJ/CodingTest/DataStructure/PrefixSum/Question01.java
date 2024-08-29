@@ -3,9 +3,9 @@ package BOJ.CodingTest.DataStructure.PrefixSum;
 import java.io.*;
 import java.util.*;
 
-/* 백준 - 11659 구간 합 구하기 */
 public class Question01 {
     public static void main(String[] args) throws IOException{
+        /* 백준 11659번 문제 https://www.acmicpc.net/problem/11659 */
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
 
