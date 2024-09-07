@@ -18,16 +18,16 @@
         1. 데이터를 분할하는 피벗을 설정
 
         2. 피벗을 기준으로 A~E 과정을 거쳐 데이터를 2개의 집합으로 분리
-            A) start 데이터가 pivot 데이터보다 큰 수가 나올때 까지 오른쪽으로 이동한다.
+            A) start 데이터가 pivot 데이터보다 큰 수가 나올때 까지 오른쪽으로 한 칸 이동한다.
             
-            B) end 데이터가 pivot이 가리키는 데이터보다 작은 수가 나올때까지 왼쪽으로 한 칸 이동
+            B) end 데이터가 pivot이 가리키는 데이터보다 작은 수가 나올때까지 왼쪽으로 한 칸 이동한다.
 
             C) start 데이터가 pivot이 가리키는 데이터보다 크고, end 데이터가 pivot이 가리키는
                데이터보다 작으면 start, end 데이터를 swap하고 start는 오른쪽, end는 왼쪽으로 한 칸씩 이동
 
             D) start와 end 각각 위치를 옮기다가 end가 start보다 왼쪽에 위치하는 즉시 멈춘다.
 
-            E) end 데이터가 start 데이터보다 작아지는 시점이 오면 pivot과 end 데이터를 swap
+            E) end 데이터가 start 데이터보다 작아지는 시점이 오면 pivot과 end 데이터 또는 start 데이터를 swap
 
             F) 그 결과 start의 왼쪽에는 pivot보다 작은 수들로만, end의 왼쪽에는 pivot보다 큰 수로만 이루어짐.
         
