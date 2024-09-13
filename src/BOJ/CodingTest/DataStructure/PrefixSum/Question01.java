@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.*;
 
 public class Question01 {
+    /* 백준 11659번 문제 https://www.acmicpc.net/problem/11659 */
     public static int[] twoPointer(int[] A, int[][] command){
 
         int[] copyA = new int[A.length + 1];
